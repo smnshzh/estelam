@@ -1,6 +1,5 @@
 "use client";
 
-import { EmailPasswordAuth } from "supertokens-auth-react/recipe/emailpassword";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -12,40 +11,17 @@ export default function SignIn() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const signIn = EmailPasswordAuth.useSignIn();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
 
     try {
-      const response = await signIn({
-        formFields: [
-          {
-            id: "email",
-            value: email
-          },
-          {
-            id: "password",
-            value: password
-          }
-        ]
-      });
-
-      if (response.status === "FIELD_ERROR") {
-        response.formFields.forEach(field => {
-          if (field.id === "email") {
-            setError("ایمیل نامعتبر است");
-          } else if (field.id === "password") {
-            setError("رمز عبور اشتباه است");
-          }
-        });
-      } else if (response.status === "WRONG_CREDENTIALS_ERROR") {
-        setError("ایمیل یا رمز عبور اشتباه است");
-      } else {
-        // ورود موفق
+      // Simple mock authentication
+      if (email === "admin@test.com" && password === "123456") {
         router.push("/dashboard");
+      } else {
+        setError("ایمیل یا رمز عبور اشتباه است");
       }
     } catch (err) {
       setError("خطا در ورود. لطفاً دوباره تلاش کنید.");
@@ -116,6 +92,10 @@ export default function SignIn() {
             >
               {isLoading ? "در حال ورود..." : "ورود"}
             </button>
+          </div>
+          
+          <div className="text-center text-sm text-gray-500">
+            <p>برای تست: admin@test.com / 123456</p>
           </div>
         </form>
       </div>
