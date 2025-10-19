@@ -1,6 +1,8 @@
 "use client";
 
 import { SuperTokensProvider as STProvider } from "supertokens-auth-react";
+import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
+import Session from "supertokens-auth-react/recipe/session";
 
 const clientConfig = {
   appInfo: {
@@ -11,14 +13,8 @@ const clientConfig = {
     websiteBasePath: "/auth"
   },
   recipeList: [
-    {
-      id: "emailpassword",
-      name: "EmailPassword"
-    },
-    {
-      id: "session",
-      name: "Session"
-    }
+    EmailPassword.init(),
+    Session.init()
   ]
 };
 
