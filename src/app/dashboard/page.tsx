@@ -1,15 +1,12 @@
 "use client";
 
-import { SessionAuth } from "supertokens-auth-react/recipe/session";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Dashboard() {
   const router = useRouter();
 
   return (
-    <SessionAuth>
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white shadow">
@@ -81,6 +78,5 @@ export default function Dashboard() {
           </div>
         </main>
       </div>
-    </SessionAuth>
   );
 }
