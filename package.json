@@ -10,13 +10,14 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "wrangler": "wrangler",
-    "d1:create": "wrangler d1 create estelam-db",
-    "d1:migrate": "wrangler d1 execute estelam-db --file=./database/schema.sql",
-    "d1:backup": "wrangler d1 export estelam-db --output=backup.sql",
+    "d1:create": "wrangler d1 create estelam",
+    "d1:migrate": "wrangler d1 execute estelam --file=./database/schema.sql",
+    "d1:backup": "wrangler d1 export estelam --output=backup.sql",
     "kv:create": "wrangler kv:namespace create ESTELAM_KV",
     "kv:create-preview": "wrangler kv:namespace create ESTELAM_KV --preview",
     "deploy": "wrangler deploy",
-    "pages:deploy": "wrangler pages deploy .next"
+    "pages:deploy": "wrangler pages deploy .next",
+    "import:csv": "node scripts/import-csv.js"
   },
   "dependencies": {
     "next": "^15.5.6",

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پلتفرم استعلام اعتبار مشتریان</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px 0;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #1f2937;
+            font-size: 24px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .nav a {
+            color: #6b7280;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #1f2937;
+            background-color: #f3f4f6;
+        }
+        
+        .nav a.active {
+            color: #4f46e5;
+            background-color: #eef2ff;
+        }
+        
+        .main {
+            padding: 40px 0;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 32px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4338ca;
+        }
+        
+        .btn-success {
+            background-color: #059669;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #047857;
+        }
+        
+        .btn-disabled {
+            background-color: #9ca3af;
+            color: white;
+            cursor: not-allowed;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+        
+        .feature {
+            text-align: right;
+        }
+        
+        .feature h4 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+        
+        .feature ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .feature li {
+            color: #6b7280;
+            margin-bottom: 8px;
+            padding-right: 8px;
+        }
+        
+        .footer {
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 40px 0;
+            text-align: center;
+            color: #6b7280;
+        }
+        
+        .chat-info {
+            background: #dbeafe;
+            border: 1px solid #93c5fd;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        
+        .chat-info p {
+            color: #1e40af;
+            margin: 0 0 8px 0;
+        }
+        
+        .chat-url {
+            font-family: monospace;
+            background: #f3f4f6;
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>پلتفرم استعلام اعتبار مشتریان</h1>
+            <nav class="nav">
+                <a href="/">خانه</a>
+                <a href="/customers">مشتریان</a>
+                <a href="/chat" class="active">چت</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero">
+                <h2>سیستم چت زنده</h2>
+                <p>ارتباط مستقیم با مشتریان از طریق Cloudflare Workers</p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 وضعیت سیستم</h3>
+                <p>سیستم چت با موفقیت راه‌اندازی شده و در حال اجرا است.</p>
+                
+                <div class="chat-info">
+                    <p><strong>Worker چت در آدرس زیر در دسترس است:</strong></p>
+                    <div class="chat-url">https://chat-worker.smnshzh.workers.dev</div>
+                </div>
+
+                <h3>📊 آمار پایگاه داده</h3>
+                <p>تعداد مشتریان وارد شده: <strong>5 مشتری</strong></p>
+                <p>وضعیت پایگاه داده: <strong>فعال</strong></p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>💬 API های چت</h3>
+                    <p>API های موجود برای مدیریت چت:</p>
+                    <ul>
+                        <li>GET /api/chat/channels - دریافت کانال‌ها</li>
+                        <li>POST /api/chat/channels - ایجاد کانال جدید</li>
+                        <li>GET /api/chat/messages - دریافت پیام‌ها</li>
+                        <li>POST /api/chat/messages - ارسال پیام</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🗄️ پایگاه داده</h3>
+                    <p>اطلاعات پایگاه داده D1:</p>
+                    <ul>
+                        <li>نام: estelam</li>
+                        <li>ID: ddad3c70-28f1-470f-98fe-4a16f51951a8</li>
+                        <li>نوع: SQLite</li>
+                        <li>وضعیت: متصل</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 خدمات جغرافیایی</h3>
+                    <p>API معکوس جغرافیایی فارسی:</p>
+                    <ul>
+                        <li>آدرس: https://reverse-geocoding.raah.ir/v1/</li>
+                        <li>نوع: محله، شهر، استان</li>
+                        <li>وضعیت: فعال</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h4>🎯 قابلیت‌های پیاده‌سازی شده</h4>
+                    <ul>
+                        <li>✅ پایگاه داده D1 راه‌اندازی</li>
+                        <li>✅ Worker چت deploy شده</li>
+                        <li>✅ API معکوس جغرافیایی</li>
+                        <li>✅ Import داده‌های CSV</li>
+                        <li>✅ سیستم اعتبارسنجی</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h4>🚀 مراحل بعدی</h4>
+                    <ul>
+                        <li>🔄 رابط کاربری چت</li>
+                        <li>🔄 سیستم احراز هویت</li>
+                        <li>🔄 نقشه تعاملی</li>
+                        <li>🔄 گزارش‌گیری</li>
+                        <li>🔄 اعلان‌ها</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>پلتفرم استعلام اعتبار مشتریان - نسخه 1.0</p>
+            <p>Powered by Cloudflare Workers & D1 Database</p>
+        </div>
+    </footer>
+</body>
+</html>

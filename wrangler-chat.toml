@@ -1,0 +1,8 @@
+name = "chat-worker"
+main = "src/workers/chat-worker.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "estelam"
+database_id = "ddad3c70-28f1-470f-98fe-4a16f51951a8"
