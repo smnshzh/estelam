@@ -1,0 +1,40 @@
+name = "estelam-platform"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "estelam-platform"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "estelam-db"
+database_id = "your-database-id"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+[vars]
+NEXT_PUBLIC_API_DOMAIN = "https://your-domain.pages.dev"
+NEXT_PUBLIC_WEBSITE_DOMAIN = "https://your-domain.pages.dev"
+SUPERTOKENS_DASHBOARD_API_KEY = "your-dashboard-api-key"
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN = "your-mapbox-token"
+NEXT_PUBLIC_STREAM_API_KEY = "your-stream-api-key"
+STREAM_API_SECRET = "your-stream-api-secret"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js", "**/*.mjs"]
+
+[build.upload.rules]
+type = "Text"
+globs = ["**/*.html", "**/*.css", "**/*.json"]
+
+[build.upload.rules]
+type = "Data"
+globs = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.svg", "**/*.ico", "**/*.woff", "**/*.woff2", "**/*.ttf", "**/*.eot"]
