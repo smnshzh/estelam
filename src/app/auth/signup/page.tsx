@@ -1,6 +1,5 @@
 "use client";
 
-import { EmailPasswordAuth } from "supertokens-auth-react/recipe/emailpassword";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -14,48 +13,20 @@ export default function SignUp() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const signUp = EmailPasswordAuth.useSignUp();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
 
     try {
-      const response = await signUp({
-        formFields: [
-          {
-            id: "email",
-            value: email
-          },
-          {
-            id: "password",
-            value: password
-          },
-          {
-            id: "name",
-            value: name
-          },
-          {
-            id: "phone",
-            value: phone
-          }
-        ]
-      });
-
-      if (response.status === "FIELD_ERROR") {
-        response.formFields.forEach(field => {
-          if (field.id === "email") {
-            setError("ایمیل نامعتبر است");
-          } else if (field.id === "password") {
-            setError("رمز عبور باید حداقل ۸ کاراکتر باشد");
-          }
-        });
-      } else if (response.status === "SIGN_UP_NOT_ALLOWED") {
-        setError("ثبت‌نام در حال حاضر امکان‌پذیر نیست");
+      // Simple mock registration
+      if (email && password && name && phone) {
+        // Simulate successful registration
+        setTimeout(() => {
+          router.push("/dashboard");
+        }, 1000);
       } else {
-        // ثبت‌نام موفق
-        router.push("/dashboard");
+        setError("لطفاً تمام فیلدها را پر کنید");
       }
     } catch (err) {
       setError("خطا در ثبت‌نام. لطفاً دوباره تلاش کنید.");
