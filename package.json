@@ -16,7 +16,8 @@
     "kv:create": "wrangler kv:namespace create ESTELAM_KV",
     "kv:create-preview": "wrangler kv:namespace create ESTELAM_KV --preview",
     "deploy": "wrangler deploy",
-    "pages:deploy": "wrangler pages deploy .next",
+    "pages:build": "npx @cloudflare/next-on-pages build",
+    "pages:deploy": "wrangler pages deploy .vercel/output/static --functions=.vercel/output/functions",
     "import:csv": "node scripts/import-csv.js"
   },
   "dependencies": {
@@ -30,7 +31,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
     "mapbox-gl": "^3.1.2",
-    "next": "^15.5.6",
+    "next": "^15.5.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "stream-chat": "^9.22.0",

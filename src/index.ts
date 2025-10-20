@@ -1,6 +1,11 @@
 // Cloudflare Worker entry point
 import { D1DatabaseService } from "./lib/d1-database";
 import { KVService } from "./lib/kv-service";
+import type { D1Database } from "./lib/d1-database";
+
+// Minimal type aliases for Cloudflare Worker environment
+type KVNamespace = any;
+type ExecutionContext = unknown;
 
 export interface Env {
   DB: D1Database;
@@ -19,9 +24,9 @@ export default {
     const db = new D1DatabaseService(env.DB);
     const kv = new KVService(env.KV);
     
-    // Make services available globally
-    globalThis.__D1_DATABASE = db;
-    globalThis.__KV_STORE = kv;
+    // Make services available globally (non-typed)
+    (globalThis as any).__D1_DATABASE = db;
+    (globalThis as any).__KV_STORE = kv;
     
     const url = new URL(request.url);
     
@@ -285,9 +290,6 @@ async function handleAnalytics(request: Request, env: Env): Promise<Response> {
 }
 
 async function handleStaticRequest(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-  // This would handle static file serving and Next.js pages
-  // For now, return a simple response
-  return new Response('Estelam Platform - Static Content', {
-    headers: { 'Content-Type': 'text/html' }
-  });
+  // Worker فقط API را سرو می‌کند؛ سایر مسیرها 404 می‌شوند
+  return new Response('Not Found', { status: 404 });
 }

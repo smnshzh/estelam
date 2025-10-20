@@ -8,12 +8,12 @@ name = "estelam-platform"
 [[d1_databases]]
 binding = "DB"
 database_name = "estelam"
-database_id = "ddad3c70-28f1-470f-98fe-4a16f51951a8"
+database_id = "0fcf94f5-abd6-42c7-b09d-407f1a2ee19a"
 
 [[kv_namespaces]]
 binding = "KV"
-id = "your-kv-namespace-id"
-preview_id = "your-preview-kv-namespace-id"
+id = "6c2e079bd1294b61bdb9734ea9764641"
+preview_id = "bb00a9d856e347538b2c047b6134c576"
 
 [vars]
 NEXT_PUBLIC_API_DOMAIN = "https://your-domain.pages.dev"
