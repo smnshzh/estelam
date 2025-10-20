@@ -23,14 +23,14 @@ export default function Home() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 space-x-reverse">
-              <Link href="#features" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
-                ویژگی‌ها
+              <Link href="/customers/register" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
+                ثبت مشتری
               </Link>
-              <Link href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
-                قیمت‌گذاری
+              <Link href="/customers/verify" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
+                تایید مشتری
               </Link>
-              <Link href="#contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
-                تماس
+              <Link href="/experiences/share" className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
+                اشتراک تجربه
               </Link>
             </div>
 
@@ -68,14 +68,14 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50">
             <div className="px-6 py-4 space-y-4">
-              <Link href="#features" className="block text-gray-600 hover:text-gray-900 font-medium">
-                ویژگی‌ها
+              <Link href="/customers/register" className="block text-gray-600 hover:text-gray-900 font-medium">
+                ثبت مشتری
               </Link>
-              <Link href="#pricing" className="block text-gray-600 hover:text-gray-900 font-medium">
-                قیمت‌گذاری
+              <Link href="/customers/verify" className="block text-gray-600 hover:text-gray-900 font-medium">
+                تایید مشتری
               </Link>
-              <Link href="#contact" className="block text-gray-600 hover:text-gray-900 font-medium">
-                تماس
+              <Link href="/experiences/share" className="block text-gray-600 hover:text-gray-900 font-medium">
+                اشتراک تجربه
               </Link>
               <div className="border-t border-gray-200 pt-4 space-y-3">
                 <Link href="/auth/signin" className="block text-gray-600 hover:text-gray-900 font-medium">
