@@ -61,7 +61,7 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-sm w-full space-y-8">
         {/* Header */}
         <div className="text-center">
           <div className="flex justify-center mb-6">
@@ -106,8 +106,8 @@ export default function SignUp() {
 
         {/* Email Registration Form */}
         {authMethod === 'email' && (
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <form onSubmit={handleEmailSubmit} className="space-y-6">
+          <div className="bg-white rounded-2xl shadow-xl p-6">
+            <form onSubmit={handleEmailSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   نام و نام خانوادگی *
@@ -217,7 +217,7 @@ export default function SignUp() {
 
         {/* Telegram Registration */}
         {authMethod === 'telegram' && (
-          <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="bg-white rounded-2xl shadow-xl p-6">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
