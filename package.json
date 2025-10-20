@@ -38,6 +38,7 @@
     "supertokens-auth-react": "^0.50.0",
     "supertokens-node": "^23.0.1",
     "tailwind-merge": "^2.5.5",
+    "telegraf": "^4.16.3",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
