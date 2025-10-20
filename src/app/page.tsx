@@ -95,18 +95,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
-              🚀 جدیدترین پلتفرم مدیریت فروشندگان
+              🚀 جدیدترین پلتفرم اشتراک تجربه فروشندگان
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              مدیریت فروشندگان
+              اشتراک تجربه‌های فروشندگان
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                هوشمند و مدرن
+                و مدیریت گروهی
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-              با استفاده از هوش مصنوعی و تکنولوژی‌های پیشرفته، فروشندگان خود را بهتر مدیریت کنید
+              پلتفرم اشتراک تجربه‌های فروشندگان و مدیریت گروهی مغازه‌ها با هوش مصنوعی
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -149,7 +149,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">ویژگی‌های پیشرفته</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                ابزارهای قدرتمند و هوشمند برای مدیریت بهتر فروشندگان و بهبود تجربه کاربری
+                ابزارهای قدرتمند برای اشتراک تجربه‌ها و مدیریت گروهی مغازه‌ها
               </p>
             </div>
 
@@ -366,7 +366,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">آماده شروع هستید؟</h2>
             <p className="text-xl text-blue-100 mb-8">
-              همین حالا به خانواده بزرگ استعلام بپیوندید و تجربه مدیریت فروشندگان را متحول کنید
+              همین حالا به خانواده بزرگ استعلام بپیوندید و تجربه اشتراک و مدیریت گروهی را متحول کنید
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
