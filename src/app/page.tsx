@@ -164,7 +164,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">موقعیت‌یابی هوشمند</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  مدیریت فروشندگان بر اساس موقعیت جغرافیایی با نقشه‌های تعاملی و جستجوی هوشمند
+                  ثبت مغازه‌ها بر اساس موقعیت جغرافیایی با نقشه‌های تعاملی و جستجوی هوشمند
                 </p>
               </div>
 
@@ -345,13 +345,13 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     پشتیبانی اختصاصی
-                  </li>
+          </li>
                   <li className="flex items-center text-gray-600">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     سفارشی‌سازی کامل
-                  </li>
+          </li>
                 </ul>
                 <Link href="#contact" className="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold text-center block hover:bg-gray-800 transition-colors">
                   تماس بگیرید
@@ -395,7 +395,7 @@ export default function Home() {
                     <span className="text-white font-bold text-lg">🏪</span>
                   </div>
                   <h3 className="text-2xl font-bold text-white">استعلام</h3>
-                </div>
+        </div>
                 <p className="text-gray-400 mb-6">
                   پلتفرم پیشرفته مدیریت فروشندگان با قابلیت‌های مدرن و کاربردی
                 </p>
@@ -443,7 +443,7 @@ export default function Home() {
               <p>&copy; ۲۰۲۴ استعلام. تمام حقوق محفوظ است.</p>
             </div>
           </div>
-        </footer>
+      </footer>
       </main>
     </div>
   );
